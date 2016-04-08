@@ -6,7 +6,7 @@ import java.util.List;
 
 public enum EKsdMenu {
 	  KSD( "", "")
-	, KSD193C3	(
+	, Ksd193C3	(
 					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07001V.xml&menuNo=191"
 			  	,   "<reqParam action=\"newnIssuSecnListCnt\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriCommPTask\">"
 	  			+ 	"<SECN_TPNM value=\"ELS\"/>"
@@ -18,8 +18,8 @@ public enum EKsdMenu {
 	  			+ 	"<END_PAGE value=\"10\"/>"
 	  			+ 	"</reqParam>"
 			  	)
-	, KSD193T3	(
-					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07001V.xml&menuNo=191"
+	, Ksd193T3	(
+				 	"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07001V.xml&menuNo=191"
 				,	"<reqParam action=\"newnIssuSecnPList\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriCommPTask\">"
 				+ 	"<STD_DT value=\"${STD_DT}\"/>"
 				+ 	"<START_PAGE value=\"1\"/>"
@@ -30,7 +30,7 @@ public enum EKsdMenu {
 				+ 	"<W2XPATH value=\"/IPORTAL/user/derivCombi/BIP_CNTS07001V.xml\"/>"
 				+ 	"</reqParam>"
 				)
- 	,  KSD200T1	(
+ 	,  Ksd200T1	(
 //				  	"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/etc/BIP_CMUC01054P.xml&secn_tpcd=41"
  			        "http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07016V.xml&menuNo=200"
 				, 	"<reqParam action=\"issuInfoList\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriELSPTask\">"
@@ -40,7 +40,7 @@ public enum EKsdMenu {
 				+ 	"<ISIN value=\"${ISIN}\"/>"
 				+ 	"</reqParam>"
  			  	)
-	, KSD200T2	(
+	, Ksd200T2	(
 				  	"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07016V.xml&menuNo=200"
 				, 	"<reqParam action=\"bassetXrcList\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriELSPTask\">"
 				+ 	"<MENU_NO value=\"200\"/>"
@@ -49,7 +49,7 @@ public enum EKsdMenu {
 				+ 	"<ISIN value=\"${ISIN}\"/>" 
 				+ 	"</reqParam>"
 				)
-	, KSD200T3 (
+	, Ksd200T3 (
 				  	"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07016V.xml&menuNo=200"
 				, 	"<reqParam action=\"midValatSkedulRedCondiList\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriELSPTask\">"
 				+ 	"<MENU_NO value=\"200\"/>"
@@ -58,7 +58,7 @@ public enum EKsdMenu {
 				+ 	"<ISIN value=\"${ISIN}\"/>"
 				+ 	"</reqParam>"
 				)
-	, KSD200T5  (
+	, Ksd200T5  (
 			      	"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07016V.xml&menuNo=200"
 				, 	"<reqParam action=\"bassetInfoList\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriELSPTask\">"
 				+ 	"<MENU_NO value=\"200\"/>"
@@ -67,7 +67,7 @@ public enum EKsdMenu {
 				+ 	"<ISIN value=\"${ISIN}\"/>"
 				+ 	"</reqParam>"
 				)
-	, KSD200P1	(
+	, Ksd200P1	(
 					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/etc/BIP_CMUC01054P.xml&secn_tpcd=41"
 				,	"<reqParam action=\"searchIsscoBySecnList\" task=\"ksd.safe.bip.cmuc.User.process.SearchPTask\">"
 				+	"<ISSUCO_CUSTNO value=\"${ISSUCO_CUSTNO}\"/>"
@@ -75,7 +75,7 @@ public enum EKsdMenu {
 				+ 	"<SECN_TPCD value=\"41\"/>"
 				+ 	"</reqParam>"
 				)
-	, KSD210P1	(
+	, Ksd210P1	(
 					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/etc/BIP_CMUC01054P.xml&secn_tpcd=43"
 				,	"<reqParam action=\"searchIsscoBySecnList\" task=\"ksd.safe.bip.cmuc.User.process.SearchPTask\">"
 				+ 	"<ISSUCO_CUSTNO value=\"${ISSUCO_CUSTNO}\"/>"
@@ -84,7 +84,7 @@ public enum EKsdMenu {
 				+ 	"</reqParam>"
 				)
 	
-	, KSD210T1	(
+	, Ksd210T1	(
 					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07024V.xml&menuNo=210"
 				,	"<reqParam action=\"issuInfoList\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriDLSPTask\">"
 				+ 	"<MENU_NO value=\"210\"/>"
@@ -93,7 +93,7 @@ public enum EKsdMenu {
 				+  	"<ISIN value=\"${ISIN}\"/>"
 				+ 	"</reqParam>"
 				)
-	, KSD210T2	(
+	, Ksd210T2	(
 					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07024V.xml&menuNo=210"
 				,	"<reqParam action=\"bassetXrcList\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriDLSPTask\">"
 				+ 	"<MENU_NO value=\"210\"/>"
@@ -102,7 +102,7 @@ public enum EKsdMenu {
 				+ 	"<ISIN value=\"${ISIN}\"/>"
 				+ 	"</reqParam>"
 				)
-	, KSD210T3	(
+	, Ksd210T3	(
 					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07024V.xml&menuNo=210"
 				, 	"<reqParam action=\"midValastSkedulRedCondList\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriDLSPTask\">"
 				+ 	"<MENU_NO value=\"210\"/>"
@@ -111,7 +111,7 @@ public enum EKsdMenu {
 				+ 	"<ISIN value=\"${ISIN}\"/>"
 				+ 	"</reqParam>"
 				)
-	, KSD210T5	(
+	, Ksd210T5	(
 					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07024V.xml&menuNo=210"
 				, 	"<reqParam action=\"bassetInfoList\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriELSPTask\">"
 				+ 	"<MENU_NO value=\"210\"/>"
@@ -121,7 +121,7 @@ public enum EKsdMenu {
 				+ 	"</reqParam>"
 				)
 //	DLS 상환종목
-	, KSD208C1	(
+	, Ksd208C1	(
 					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07022V.xml&menuNo=208"
 				, 	"<reqParam action=\"redSecnListCnt\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriDLSPTask\">"
 				+ 	"<SECN_TPCD value=\"43\"/><MENU_NO value=\"208\"/>"
@@ -138,7 +138,7 @@ public enum EKsdMenu {
 				+ 	"<DERICBND_YN value=\"\"/>"
 				+ 	"</reqParam>"
 				)
-	, KSD208T1	(
+	, Ksd208T1	(
 					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07022V.xml&menuNo=208"
 				,	"<reqParam action=\"redSecnPList\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriDLSPTask\">"
 				+	"<SECN_TPCD value=\"43\"/>"
@@ -157,7 +157,7 @@ public enum EKsdMenu {
 				+ 	"</reqParam>"
 				)
 //	ELS 상환종목	
-	, KSD198C1	(
+	, Ksd198C1	(
 					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07013V.xml&menuNo=198"
 				, 	"<reqParam action=\"redSecnListCnt2\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriELSPTask\">"
 				+ 	"<SECN_TPCD value=\"41\"/>"
@@ -174,7 +174,7 @@ public enum EKsdMenu {
 				+ 	"<DERICBND_YN value=\"\"/>"
 				+ 	"</reqParam>"
 				)
-	, KSD198T1	(
+	, Ksd198T1	(
 					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07013V.xml&menuNo=198"
 				,	"<reqParam action=\"redSecnPList2\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriELSPTask\">"
 				+ 	"<SECN_TPCD value=\"41\"/>"
@@ -192,7 +192,7 @@ public enum EKsdMenu {
 				+ 	"</reqParam>"
 				)
 //	DLS 청약종목조회
-	, KSD207C1	(
+	, Ksd207C1	(
 					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07021V.xml&menuNo=207"
 				,	"<reqParam action=\"subsIsinListCnt\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriDLSPTask\">"
 				+ 	"<SECN_TPCD value=\"43\"/>"
@@ -204,7 +204,7 @@ public enum EKsdMenu {
 				+ 	"<END_PAGE value=\"30\"/>"
 				+ 	"</reqParam>"
 				)
-	, KSD207T1	(
+	, Ksd207T1	(
 					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07021V.xml&menuNo=207"
 				,	"<reqParam action=\"subsIsinPList\" task=\"ksd.safe.bip.cnts.DerivCombi.process.DeriDLSPTask\">"
 				+ 	"<SECN_TPCD value=\"43\"/>"
@@ -221,13 +221,19 @@ public enum EKsdMenu {
 
 	private String referer;
 	private String payload;
+//	private String className;
 
 	private EKsdMenu() {
 	}
 
 	private EKsdMenu(String referer, String payload) {
+//		this.className =className;
 		this.referer = referer;
 		this.payload = payload;
+	}
+
+	public String getTargetClassName() {
+		return "com.eugenefe.entity."+ this.toString();
 	}
 
 	public String getReferer() {

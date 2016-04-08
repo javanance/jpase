@@ -24,7 +24,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 
-import fetchKrx.$6001KsdDataTest;
+import fetchKrx.$6001KsdScrapUtilTest;
 
 public class KsdMenu200P {
 	private String payload;
