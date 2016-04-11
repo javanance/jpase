@@ -19,13 +19,14 @@ import com.eugenefe.entity.Ksd200T2;
 import com.eugenefe.entity.Ksd200T3;
 import com.eugenefe.entity.OdsKrxMeta;
 import com.eugenefe.enums.EKsdMenu;
+import com.eugenefe.utils.JsonStringUtil;
 import com.eugenefe.utils.KsdScrapUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 
-public class $6001KsdScrapUtilTest {
-	private final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger($6001KsdScrapUtilTest.class);
-	private final static Logger _logger = LoggerFactory.getLogger($6001KsdScrapUtilTest.class);
+public class $9003JsonStringUtilTest {
+	private final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger($9003JsonStringUtilTest.class);
+	private final static Logger _logger = LoggerFactory.getLogger($9003JsonStringUtilTest.class);
 	private static Properties properties = new Properties();
 	// private static String filePath = "D:\\Dev\\krxData\\";
 	private static String filePath;
@@ -34,6 +35,7 @@ public class $6001KsdScrapUtilTest {
 	private static OdsKrxMeta meta;
 
 	public static void main(String[] args) throws Exception {
+
 		// String isin ="KR4201L42470";
 		// String isin ="KR4201KC2424";
 		// String isin ="KR6723301646";
@@ -58,16 +60,11 @@ public class $6001KsdScrapUtilTest {
 		rawData.put("END_PAGE", endPage);
 		rawData.put("RED_DT1", baseDate);
 		rawData.put("RED_DT2", baseDate);
-		
-		logger.info("list : {}, {}", EKsdMenu.Ksd200T3.getReferer(), EKsdMenu.Ksd193C3.getPayload());
-//		logger.info("list : {}, {}", EKsdMenu.Ksd193C3.getReferer(), EKsdMenu.Ksd193C3.getProperties());
-		
-//		rst = KsdScrapUtil.getListJson(EKsdMenu.Ksd200T2, rawData);
-//		logger.info("list : {}, {}", EKsdMenu.Ksd193C3.getReferer(), rst);
 
-//		List<Ksd200T3> zzz = KsdScrapUtil.convertTo(EKsdMenu.Ksd200T3, rawData);
-//		for (Ksd200T3 aa : zzz) {
-//			logger.info("list : {}, {}", aa.getClass(), aa.getIsin());
-//		}
+		rst = KsdScrapUtil.getListJson(EKsdMenu.Ksd200T2, rawData);
+		logger.info("list : {}, {}", rst);
+	
+		logger.info("translate : {},{}", JsonStringUtil.extractElemntsFrom(rst));
 	}
+
 }

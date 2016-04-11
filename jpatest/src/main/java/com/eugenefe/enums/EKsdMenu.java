@@ -1,10 +1,14 @@
 package com.eugenefe.enums;
 
+import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Properties;
 
-public enum EKsdMenu {
+import com.eugenefe.interfaces.UrlMenu;
+
+public enum EKsdMenu implements UrlMenu{
 	  KSD( "", "")
 	, Ksd193C3	(
 					"http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07001V.xml&menuNo=191"
@@ -215,19 +219,25 @@ public enum EKsdMenu {
 				+ 	"<START_PAGE value=\"1\"/>"
 				+ 	"<END_PAGE value=\"${END_PAGE}\"/>"
 				+ 	"</reqParam>"
-			
 				)
 	;
 
 	private String referer;
 	private String payload;
 //	private String className;
+	private Properties properties;
 
 	private EKsdMenu() {
+		properties = new  Properties();
+		try {
+			properties.load(EKsdMenu.class.getResourceAsStream("/ksd.properties"));
+		} catch (Exception ex) {
+			System.out.println("Error : ksd.properties not found in class path ");
+		}
 	}
 
 	private EKsdMenu(String referer, String payload) {
-//		this.className =className;
+		this();
 		this.referer = referer;
 		this.payload = payload;
 	}
@@ -237,10 +247,16 @@ public enum EKsdMenu {
 	}
 
 	public String getReferer() {
+		if( properties.getProperty(this.toString().toUpperCase()+"_referer") != null){
+			return  properties.getProperty(this.toString().toUpperCase()+"_referer");
+		}
 		return referer;
 	}
 
 	public String getPayload() {
+		if( properties.getProperty(this.toString().toUpperCase()+"_payload") != null){
+			return  properties.getProperty(this.toString().toUpperCase()+"_payload");
+		}
 		return payload;
 	}
 
@@ -252,5 +268,8 @@ public enum EKsdMenu {
 		}
 		return rst;
 	}
-
+	
+	public static String getUrl(){
+		return  "http://www.seibro.or.kr/websquare/engine/proworks/callServletService.jsp";
+	}
 }
