@@ -27,10 +27,14 @@ public class $9002StringReplace {
 //	private static OdsKrxMarketDataDao daoAll = new OdsKrxMarketDataDao();
 	
 	public static void main(String[] args) throws Exception{
-		StringReplace();
+//		StringReplace();
+		StringAt();
 	}
 	
-	
+	private static void StringAt(){
+		String aaa = "aaaaabd=db";
+		logger.info("aaa: {}", aaa.indexOf("="));
+	}
 	private static String StringReplace(){
 //		String template = "Welcome ${username}!  Your last login was ${lastlogin}";
 //		String template = "Welcome \"${username}\"!  Your last login was \"${lastlogin}\"";

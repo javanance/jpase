@@ -17,12 +17,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import com.eugenefe.enums.EKsdMenu;
-import com.eugenefe.enums.EKsdMenuDyn;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 
-public class KsdScrapUtil {
-	private static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(KsdScrapUtil.class);
+public class KsdScrapUtilEnum {
+	private static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(KsdScrapUtilEnum.class);
 
 	private static final String url = "http://www.seibro.or.kr/websquare/engine/proworks/callServletService.jsp";
 
@@ -30,11 +29,11 @@ public class KsdScrapUtil {
 	 * call getListJson(ksdMenu, data, "result", "value");
 	 * 
 	 */
-	public static String getListJson(EKsdMenuDyn ksdMenu, Map<String, String> data) {
+	public static String getListJson(EKsdMenu ksdMenu, Map<String, String> data) {
 		return getListJson(ksdMenu.getReferer(), ksdMenu.getPayload(),filterParameters(ksdMenu, data), "result", "value");
 	}
 
-	public static String getListJson(EKsdMenuDyn ksdMenu, Map<String, String> data, String elementName, String attrName) {
+	public static String getListJson(EKsdMenu ksdMenu, Map<String, String> data, String elementName, String attrName) {
 		return getListJson(ksdMenu.getReferer(), ksdMenu.getPayload(), filterParameters(ksdMenu, data), elementName, attrName);
 	}
 
@@ -77,7 +76,7 @@ public class KsdScrapUtil {
 		return rst;
 	}*/
 
-	public static <E> List<E> convertTo(EKsdMenuDyn ksdMenu, String jsonString) {
+	public static <E> List<E> convertTo(EKsdMenu ksdMenu, String jsonString) {
 		try {
 			Class clazz = Class.forName(ksdMenu.getTargetClassName());
 			return convertTo(clazz, jsonString);
@@ -87,7 +86,7 @@ public class KsdScrapUtil {
 		return null;
 	}
 
-	public static <E> List<E> convertTo(EKsdMenuDyn ksdMenu, Map<String, String> data) {
+	public static <E> List<E> convertTo(EKsdMenu ksdMenu, Map<String, String> data) {
 		String jsonString = getListJson(ksdMenu, filterParameters(ksdMenu, data));
 //		String jsonString = getListJson(ksdMenu, data);
 		return convertTo(ksdMenu, jsonString);
@@ -112,7 +111,7 @@ public class KsdScrapUtil {
 	}
 	
 	
-	private static Map<String, String> filterParameters(EKsdMenuDyn ksdMenu,  Map<String, String> rawData){
+	private static Map<String, String> filterParameters(EKsdMenu ksdMenu,  Map<String, String> rawData){
 		Map<String, String> data = new HashMap<String, String>();
 		for(String param: ksdMenu.getParameters()){
 			data.put(param,  rawData.get(param));

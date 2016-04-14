@@ -21,6 +21,7 @@ import com.eugenefe.entity.OdsKrxMeta;
 import com.eugenefe.enums.EKsdMenu;
 import com.eugenefe.utils.JsonStringUtil;
 import com.eugenefe.utils.KsdScrapUtil;
+import com.eugenefe.utils.KsdScrapUtilEnum;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 
@@ -61,7 +62,7 @@ public class $9003JsonStringUtilTest {
 		rawData.put("RED_DT1", baseDate);
 		rawData.put("RED_DT2", baseDate);
 
-		rst = KsdScrapUtil.getListJson(EKsdMenu.Ksd200T2, rawData);
+		rst = KsdScrapUtilEnum.getListJson(EKsdMenu.Ksd200T2, rawData);
 		logger.info("list : {}, {}", rst);
 	
 		logger.info("translate : {},{}", JsonStringUtil.extractElemntsFrom(rst));

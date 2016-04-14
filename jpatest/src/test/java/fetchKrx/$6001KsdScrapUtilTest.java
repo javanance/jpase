@@ -1,7 +1,9 @@
 package fetchKrx;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -19,7 +21,10 @@ import com.eugenefe.entity.Ksd200T2;
 import com.eugenefe.entity.Ksd200T3;
 import com.eugenefe.entity.OdsKrxMeta;
 import com.eugenefe.enums.EKsdMenu;
+import com.eugenefe.enums.EKsdMenuDyn;
+import com.eugenefe.utils.JsonDynaEnum;
 import com.eugenefe.utils.KsdScrapUtil;
+import com.eugenefe.utils.KsdScrapUtilEnum;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 
@@ -48,6 +53,8 @@ public class $6001KsdScrapUtilTest {
 		String prePayload;
 		String referer;
 		String rst;
+		StringBuffer buffer  = new StringBuffer();
+		boolean rightType =false;
 		// KsdScrapper zz = new KsdScrapper();
 
 		Map<String, String> rawData = new HashMap<String, String>();
@@ -60,12 +67,46 @@ public class $6001KsdScrapUtilTest {
 		rawData.put("RED_DT2", baseDate);
 		
 		logger.info("list : {}, {}", EKsdMenu.Ksd200T3.getReferer(), EKsdMenu.Ksd193C3.getPayload());
+		
+		
+		/*try {
+			BufferedReader reader = new BufferedReader(	new InputStreamReader(JsonDynaEnum.class.getResourceAsStream("/EKsdMenuDyn.json")));
+			
+			for (String line = reader.readLine(); line != null; line = reader.readLine()) {
+				if(line.startsWith("[")){
+					rightType = true;
+				}
+				if(rightType){
+					line = line.replaceFirst("#.*", "").trim();
+//					line = line.replaceFirst("\\/.*", "");
+//					line =line.replaceAll("\\s*", "");
+					line =line.replaceAll("\\t*", "");
+//					line =line.replaceAll("\\n*", "");
+					logger.info("line : {},{}",line.indexOf('\t'), line );
+		    		if (line.equals("")) {
+		    			continue;
+		    		}
+		    		else{
+		    			buffer.append(line);
+		    		}
+				}
+			}
+		}catch(IOException ex){
+			
+		}*/
+			
+			
+		for(EKsdMenuDyn aa : EKsdMenuDyn.values()){
+//			logger.info("list : {}, {}", aa.getName(), aa.getPayload());
+			rst = KsdScrapUtil.getListJson(aa, rawData);
+			logger.info("rst : {}, {}", aa.getName(), rst);
+		}
+		
 //		logger.info("list : {}, {}", EKsdMenu.Ksd193C3.getReferer(), EKsdMenu.Ksd193C3.getProperties());
 		
-//		rst = KsdScrapUtil.getListJson(EKsdMenu.Ksd200T2, rawData);
 //		logger.info("list : {}, {}", EKsdMenu.Ksd193C3.getReferer(), rst);
 
-//		List<Ksd200T3> zzz = KsdScrapUtil.convertTo(EKsdMenu.Ksd200T3, rawData);
+//		List<Ksd200T3> zzz = KsdScrapUtilEnum.convertTo(EKsdMenu.Ksd200T3, rawData);
 //		for (Ksd200T3 aa : zzz) {
 //			logger.info("list : {}, {}", aa.getClass(), aa.getIsin());
 //		}
