@@ -1,0 +1,37 @@
+[	{ 	 "name" 	: "Krx80103T2"
+		,"url"	    :  "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  :  "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F10%2F1004%2F10041100%2Fmkd10041100_01&name=form"
+		,"attr_name  : "block1"
+		,"form_data" : { "Form_pagePath" : "/contents/MKD/10/1004/10041100/MKD10041100.jsp", "Form_juya" : "0" , "Form_drvClssID" : "KRDRVFUUSD"}
+	}
+,	{ 	 "name" 	: "Krx80104T2"
+		,"url"	    :  "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"   :  "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F03%2F0301%2F03010000%2Fmkd03010000_04&name=form"
+		,"attr_name  : "block1"
+		,"form_data" : { "Form_pagePath" : "/contents/MKD/03/0301/03010000/MKD03010000T1.jsp", "Form_bldcode" : "MKD/10/1004/10041200/mkd10041200_02"}
+	}
+,	{ 	 "name" 	: "Krx20001T1"
+		,"url"	    :  "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"   :  "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F10%2F1004%2F10041100%2Fmkd10041100_01&name=form"
+		,"attr_name  : "block1"
+		,"form_data" : { "Form_pagePath" : "/contents/MKD/10/1004/10041100/MKD10041100.jsp", "Form_lang" : "ko" }
+	}
+,	{ 	 "name" 	: "Krx40015"
+		,"url"	    :  "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"   :  "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F06%2F0601%2F06010100%2Fmkd06010100_01&name=form"
+		,"attr_name  : "result"
+		,"form_data" : { "Form_pagePath" : "/contents/MKD/06/0601/06010100/MKD06010100.jsp","Form_lang" : "ko"}
+	}
+,	{ 	 "name" 	: "Krx40020"
+		,"url"	    :  "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"   :  "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F06%2F0602%2F06020100%2Fmkd06020100&name=form"
+		,"attr_name  : "result"
+		,"form_data" : { "Form_pagePath" : "/contents/MKD/06/0602/06020100/MKD06020100.jsp", "Form_type" : "1" }
+	}
+,	{ 	 "name" 	: "Krx40020C1"
+		,"url"	    :  "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"   :  "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=COM%2Fhpkor03002_combo&name=selectbox"
+		,"attr_name  : "block1"
+		,"form_data" : { "Form_pagePath" : "/contents/MKD/06/0602/06020100/MKD06020100.jsp", "Form_type" : "1" }
+	}							
+]		

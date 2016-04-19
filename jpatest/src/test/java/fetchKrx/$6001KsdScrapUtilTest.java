@@ -22,6 +22,7 @@ import com.eugenefe.entity.Ksd200T3;
 import com.eugenefe.entity.OdsKrxMeta;
 import com.eugenefe.enums.EKsdMenu;
 import com.eugenefe.enums.EKsdMenuDyn;
+import com.eugenefe.utils.FileUtil;
 import com.eugenefe.utils.JsonDynaEnum;
 import com.eugenefe.utils.KsdScrapUtil;
 import com.eugenefe.utils.KsdScrapUtilEnum;
@@ -53,10 +54,9 @@ public class $6001KsdScrapUtilTest {
 		String prePayload;
 		String referer;
 		String rst;
-		StringBuffer buffer  = new StringBuffer();
-		boolean rightType =false;
+		StringBuffer buffer = new StringBuffer();
+		boolean rightType = false;
 		// KsdScrapper zz = new KsdScrapper();
-
 		Map<String, String> rawData = new HashMap<String, String>();
 		rawData.put("yahoo_id", yahooId);
 		rawData.put("ISSUCO_CUSTNO", issucoCustno);
@@ -65,50 +65,38 @@ public class $6001KsdScrapUtilTest {
 		rawData.put("END_PAGE", endPage);
 		rawData.put("RED_DT1", baseDate);
 		rawData.put("RED_DT2", baseDate);
-		
-		logger.info("list : {}, {}", EKsdMenu.Ksd200T3.getReferer(), EKsdMenu.Ksd193C3.getPayload());
-		
-		
-		/*try {
-			BufferedReader reader = new BufferedReader(	new InputStreamReader(JsonDynaEnum.class.getResourceAsStream("/EKsdMenuDyn.json")));
-			
-			for (String line = reader.readLine(); line != null; line = reader.readLine()) {
-				if(line.startsWith("[")){
-					rightType = true;
-				}
-				if(rightType){
-					line = line.replaceFirst("#.*", "").trim();
-//					line = line.replaceFirst("\\/.*", "");
-//					line =line.replaceAll("\\s*", "");
-					line =line.replaceAll("\\t*", "");
-//					line =line.replaceAll("\\n*", "");
-					logger.info("line : {},{}",line.indexOf('\t'), line );
-		    		if (line.equals("")) {
-		    			continue;
-		    		}
-		    		else{
-		    			buffer.append(line);
-		    		}
-				}
-			}
-		}catch(IOException ex){
-			
-		}*/
-			
-			
-		for(EKsdMenuDyn aa : EKsdMenuDyn.values()){
-//			logger.info("list : {}, {}", aa.getName(), aa.getPayload());
-			rst = KsdScrapUtil.getListJson(aa, rawData);
-			logger.info("rst : {}, {}", aa.getName(), rst);
-		}
-		
-//		logger.info("list : {}, {}", EKsdMenu.Ksd193C3.getReferer(), EKsdMenu.Ksd193C3.getProperties());
-		
-//		logger.info("list : {}, {}", EKsdMenu.Ksd193C3.getReferer(), rst);
 
-//		List<Ksd200T3> zzz = KsdScrapUtilEnum.convertTo(EKsdMenu.Ksd200T3, rawData);
-//		for (Ksd200T3 aa : zzz) {
-//			logger.info("list : {}, {}", aa.getClass(), aa.getIsin());
-//		}
+		try {
+			logger.info("list : {}, {}", EKsdMenu.Ksd200T3.getReferer(), EKsdMenu.Ksd193C3.getPayload());
+
+			properties.load($6001KsdScrapUtilTest.class.getResourceAsStream("/filepath.properties"));
+			String ksdPath = properties.getProperty("ksdDataPath");
+			
+
+			for (EKsdMenuDyn aa : EKsdMenuDyn.values()) {
+//				 rst = KsdScrapUtil.getListJson(aa, rawData);
+//				 logger.info("rst : {}, {}", aa.getName(), rst);
+//				 if(rst !=null){
+//					 FileUtil.writeFile(ksdPath+aa.getName() + ".json", rst);
+//				 }
+				 
+//				 logger.info("list : {}, {}", aa.getName(), aa.getPayload());
+			}
+
+			// logger.info("list : {}, {}", EKsdMenu.Ksd193C3.getReferer(),
+			// EKsdMenu.Ksd193C3.getProperties());
+
+			// logger.info("list : {}, {}", EKsdMenu.Ksd193C3.getReferer(),
+			// rst);
+
+			// List<Ksd200T3> zzz =
+			// KsdScrapUtilEnum.convertTo(EKsdMenu.Ksd200T3, rawData);
+			// for (Ksd200T3 aa : zzz) {
+			// logger.info("list : {}, {}", aa.getClass(), aa.getIsin());
+			// }
+		} catch (IOException e) {
+			// TODO: handle exception
+		}
+
 	}
 }

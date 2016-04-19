@@ -2,14 +2,13 @@ package com.eugenefe.entity;
 // Generated Mar 3, 2016 4:51:13 PM by Hibernate Tools 4.3.1.Final
 
 import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-
-import org.hibernate.annotations.TypeDef;
 
 //import com.eugennefe.userType.FnCalendarUserType;
 

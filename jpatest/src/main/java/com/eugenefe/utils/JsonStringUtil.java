@@ -54,4 +54,33 @@ public class JsonStringUtil {
 		}
 		return pureJson;
 	}
+	
+	public static <E> List<E> convertTo(Class<E> klass, String jsonString) {
+		List<E> rst = new ArrayList<E>();
+		try {
+			ObjectMapper mapper = new ObjectMapper();
+			mapper.setPropertyNamingStrategy(new PropertyNamingStrategy().SNAKE_CASE);
+
+			rst = mapper.readValue(jsonString, mapper.getTypeFactory().constructCollectionType(List.class, klass));
+			return rst;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return rst;
+	}
+	
+	public static List<Map<String, String>> convertToMap(String jsonString){
+		List<Map<String, String>> rst = new ArrayList<Map<String,String>>();
+		try {
+			ObjectMapper mapper = new ObjectMapper();
+			mapper.setPropertyNamingStrategy(new PropertyNamingStrategy().SNAKE_CASE);
+			rst = mapper.readValue(jsonString, new ArrayList<HashMap<String, String>>().getClass());
+			
+			return rst;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return rst;
+	}
+	
 }

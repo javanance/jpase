@@ -31,8 +31,8 @@ public class FileUtil {
 			returnValue += line + "\n";
 			String[] arr = line.split(";");
 		}
-//		logger.info("return size : {}" , cnt);
 		reader.close();
+//		logger.info("return size : {},{}" , cnt,returnValue.replaceAll("\n", ""));
 		return returnValue;
 	}
 

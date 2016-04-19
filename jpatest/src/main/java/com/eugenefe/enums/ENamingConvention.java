@@ -14,7 +14,6 @@ public enum ENamingConvention {
 		public String convertToCamelCase(String input) {
 				return convertToCamelCase(input.toLowerCase(), '_');
 		}
-
 	}
 	, CAMEL_CASE(' ')
 	{
@@ -25,8 +24,8 @@ public enum ENamingConvention {
 	, PASCAL_CASE(' ')
 	{
 		public String convertToCamelCase(String input) {
-			 Character.isLowerCase(input.charAt(0)) ;
-			 return input;
+			char first = Character.toLowerCase(input.charAt(0));
+			return first + input.substring(1);
 		}
 	}
 	, KEBAB_CASE('-')
@@ -44,7 +43,6 @@ public enum ENamingConvention {
 	private ENamingConvention(Character delimeter) {
 		this.delimeter = delimeter;
 	}
-	
 	
 	public Character getDelimeter() {
 		return delimeter;

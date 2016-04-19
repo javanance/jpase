@@ -16,6 +16,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import com.eugenefe.enums.EKrxMenuDyn;
 import com.eugenefe.enums.EKsdMenu;
 import com.eugenefe.enums.EKsdMenuDyn;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -30,6 +31,7 @@ public class KsdScrapUtil {
 	 * call getListJson(ksdMenu, data, "result", "value");
 	 * 
 	 */
+	
 	public static String getListJson(EKsdMenuDyn ksdMenu, Map<String, String> data) {
 		return getListJson(ksdMenu.getReferer(), ksdMenu.getPayload(),filterParameters(ksdMenu, data), "result", "value");
 	}
@@ -133,20 +135,24 @@ public class KsdScrapUtil {
 			for (Element bb : aa.children()) {
 				strBuffer.append("\"").append(bb.tagName()).append("\":");
 				tempStr = bb.attr(attrName);
-
-				try {
-					strBuffer.append(Integer.parseInt(tempStr));
-				} catch (NumberFormatException nfe) {
+				if(bb.tagName().contains("_dt") && tempStr.length()==8){
+					strBuffer.append("\"").append(tempStr).append("\"");
+				}
+				else {
 					try {
-						strBuffer.append(Double.parseDouble(tempStr));
-					} catch (NumberFormatException nfee) {
-						if (tempStr.equals("")) {
-							tempStr = "null";
-							strBuffer.append(tempStr);
-						} else {
-							strBuffer.append("\"").append(tempStr).append("\"");
+						strBuffer.append(Integer.parseInt(tempStr));
+					} catch (NumberFormatException nfe) {
+						try {
+							strBuffer.append(Double.parseDouble(tempStr));
+						} catch (NumberFormatException nfee) {
+							if (tempStr.equals("")) {
+								tempStr = "null";
+								strBuffer.append(tempStr);
+							} else {
+								strBuffer.append("\"").append(tempStr).append("\"");
+							}
+							
 						}
-
 					}
 				}
 

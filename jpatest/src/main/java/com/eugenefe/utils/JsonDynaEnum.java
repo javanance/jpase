@@ -15,14 +15,14 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 
 //public class JsonDynaEnum extends DynaEnum<JsonDynaEnum> {
 public class JsonDynaEnum  {
-	private final static Logger logger = LoggerFactory.getLogger(JsonDynaEnum.class);
+//	private final static Logger logger = LoggerFactory.getLogger(JsonDynaEnum.class);
+	private final static Logger logger = LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
 
 	public static <E> List<E> convertTo(Class<E> klass) {
 		List<E> rst = new ArrayList<E>();
 		String jsonFileName =  klass.getName().substring(klass.getName().lastIndexOf('.')+1);
 		jsonFileName = "/" + jsonFileName + ".json";
 //		logger.info("json: {},{}", jsonFileName, klass.getName());
-			
 		return convertTo(klass, jsonFileName);
 		
 	}
@@ -32,7 +32,6 @@ public class JsonDynaEnum  {
 
 		try {
 			BufferedReader reader = new BufferedReader(	new InputStreamReader(JsonDynaEnum.class.getResourceAsStream(jsonFileName)));
-			
 			for (String line = reader.readLine(); line != null; line = reader.readLine()) {
 				if(line.startsWith("[")){
 					rightType = true;
@@ -52,7 +51,8 @@ public class JsonDynaEnum  {
 		    		}
 				}
 			}
-
+			logger.info("json : {}", buffer.toString());
+			
 			ObjectMapper mapper = new ObjectMapper();
 			mapper.setPropertyNamingStrategy(new PropertyNamingStrategy().SNAKE_CASE);
 			return mapper.readValue(buffer.toString(), mapper.getTypeFactory().constructCollectionType(List.class, klass));

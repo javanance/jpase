@@ -136,11 +136,11 @@
 						<MENU_NO value=\"208\"/>
 						<CMM_BTN_ABBR_NM value=\"allview,allview,print,hwp,word,pdf,seach,link,link,wide,wide,top,\"/>
 						<W2XPATH value=\"/IPORTAL/user/derivCombi/BIP_CNTS07022V.xml\"/>
-		//				<ISSUCO_CUSTNO value=\"${ISSUCO_CUSTNO}\"/>
-		//				<DERISEC_EXER_TPCD value=\"3 2\"/>
+		#				<ISSUCO_CUSTNO value=\"${ISSUCO_CUSTNO}\"/>
+		#				<DERISEC_EXER_TPCD value=\"3 2\"/>
 						<RED_DT1 value=\"${RED_DT1}\"/>
 						<RED_DT2 value=\"${RED_DT1}\"/>
-		//				<ISIN value=\"${ISIN}\"/>
+		#				<ISIN value=\"${ISIN}\"/>
 						<START_PAGE value=\"1\"/>
 						<END_PAGE value=\"${END_PAGE}\"/>
 						<KOR_SECN_NM value=\"\"/>

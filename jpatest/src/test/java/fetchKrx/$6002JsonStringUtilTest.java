@@ -63,7 +63,7 @@ public class $6002JsonStringUtilTest {
 		rawData.put("RED_DT2", baseDate);
 
 		rst = KsdScrapUtilEnum.getListJson(EKsdMenu.Ksd200T2, rawData);
-		logger.info("list : {}, {}", rst);
+//		logger.info("list : {}, {}", rst);
 
 		
 //		logger.info("translate : {},{}", JsonStringUtil.getPureJson(rst), JsonStringUtil.extractDbColumnFrom(rst));
@@ -71,11 +71,13 @@ public class $6002JsonStringUtilTest {
 //		logger.info("translate : {},{}", JsonStringUtil.extractElemntsFrom(rst));
 //		logger.info("translate : {},{}", JsonStringUtil.convert2CamelCase(rst));
 		String kebab ="aaa-bbb-ccc";
+		String pascal = "CccAaaBbb";
 		
-		logger.info("aa :{}", ENamingConvention.convertToCamelCase(rst, '_'));
-		logger.info("kebab :{}", ENamingConvention.convertToCamelCase(kebab, '-'));
-		logger.info("translate : {},{}", ENamingConvention.SNAKE_CASE.convertToCamelCase(JsonStringUtil.extractElemntsFrom(rst)));
-		logger.info("translate : {},{}", ENamingConvention.KEBAB_CASE.getDelimeter(), JsonStringUtil.extractElemntsFrom(rst).toUpperCase());
+//		logger.info("aa :{}", ENamingConvention.convertToCamelCase(rst, '_'));
+//		logger.info("kebab :{}", ENamingConvention.convertToCamelCase(kebab, '-'));
+//		logger.info("snake : {},{}", ENamingConvention.SNAKE_CASE.convertToCamelCase(JsonStringUtil.extractElemntsFrom(rst)));
+		logger.info("kebab : {},{}", ENamingConvention.KEBAB_CASE.convertToCamelCase(kebab));
+		logger.info("pascal : {},{}", ENamingConvention.PASCAL_CASE.convertToCamelCase(pascal));
 	}
 
 	

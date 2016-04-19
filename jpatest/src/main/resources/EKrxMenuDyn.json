@@ -1,0 +1,54 @@
+[	{ 	 "name" 		: "Krx80103T2"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F10%2F1004%2F10041100%2Fmkd10041100_01&name=form"
+		,"element"  	: "block1"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/10/1004/10041100/MKD10041100.jsp", "juya" : "0" , "drvClssID" : "KRDRVFUUSD", "isu_cd" : "\"${isu_cd}\""}
+#		,"form_data" 	: { "pagePath" : "/contents/MKD/10/1004/10041100/MKD10041100.jsp", "juya" : "on" , "drvClssID" : "KRDRVFUUSD", "isu_cd" : "\"${isu_cd}\""}
+		,"param_file"	: ""
+	}
+,	{ 	 "name" 		: "Krx80104T2"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"   	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F10%2F1004%2F10041200%2Fmkd10041200_01&name=form"
+		,"element"  	: "block1"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/10/1004/10041200/MKD10041200.jsp", "isu_cd" : "\"${isu_cd}\""}
+		,"param_file"	: ""
+	}
+	
+,	{ 	 "name" 		: "Krx20001T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"   	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F03%2F0301%2F03010000%2Fmkd03010000_04&name=form"
+		,"element"  	: "block1"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/03/0301/03010000/MKD03010000T1.jsp", "lang" : "ko", "schdate": "\"${schdate}\"", "idx_upclss_cd" : "\"${idx_upclss_cd}\"" }
+		,"param_file"	: ""
+	}
+,	{ 	 "name" 		: "Krx40015T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"   	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F06%2F0601%2F06010100%2Fmkd06010100_01&name=form"
+		,"element"  	: "result"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/06/0601/06010100/MKD06010100.jsp", "isu_cd": "ALL" ,"todate": "\"${todate}\""}
+		,"param_file"	: ""
+		
+	}
+,	{ 	 "name" 		: "Krx40020T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F06%2F0602%2F06020100%2Fmkd06020100&name=form"
+		,"element"  	: "result"
+#		,"form_data" 	: { "pagePath" : "/contents/MKD/06/0602/06020100/MKD06020100.jsp", "type" : "1", "cp_type" : "\"${cp_type}\"", "isu_cd" : "\"${isu_cd}\"" }
+		,"form_data" 	: { "pagePath" : "/contents/MKD/06/0602/06020100/MKD06020100.jsp", "type" : "1", "cp_type" : "C", "isu_cd" : "\"${isu_cd}\"" }
+		,"param_file"	: "Krx40020C1.json"
+	}
+,	{ 	 "name" 		: "Krx40020T2"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F06%2F0602%2F06020100%2Fmkd06020100&name=form"
+		,"element"  	: "result"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/06/0602/06020100/MKD06020100.jsp", "type" : "1", "cp_type" : "P", "isu_cd" : "\"${isu_cd}\"" }
+		,"param_file"	: "Krx40020C1.json"
+	}
+,	{ 	 "name" 		: "Krx40020C1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=COM%2Fhpkor03002_combo&name=selectbox"
+		,"element"  	: "result"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/06/0602/06020100/MKD06020100.jsp", "type" : "1" , "cp_type" : "C"}
+		,"param_file"	: ""
+	}							
+]		
