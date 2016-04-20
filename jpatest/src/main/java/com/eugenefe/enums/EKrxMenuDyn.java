@@ -1,6 +1,5 @@
 package com.eugenefe.enums;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +12,9 @@ import org.jsoup.nodes.Document;
 import com.eugenefe.utils.FilePathUtil;
 import com.eugenefe.utils.FileUtil;
 import com.eugenefe.utils.JsonDynaEnum;
-import com.eugenefe.utils.JsonStringUtil;
+import com.eugenefe.utils.JsonUtil;
 import com.eugenefe.utils.KrxScrapUtil;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.mchange.io.FileUtils;
 
 public class EKrxMenuDyn {
 	private static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(KrxScrapUtil.class);
@@ -133,7 +131,7 @@ public class EKrxMenuDyn {
 			String jsonString = FileUtil.readFile(filePath);
 			
 			
-			return JsonStringUtil.convertToMap(jsonString);
+			return JsonUtil.convertToMap(jsonString);
 //		} catch (Exception e) {
 //			// TODO: handle exception
 //		}
@@ -147,7 +145,7 @@ public class EKrxMenuDyn {
 		try {
 //			logger.info("klass: {}", getTargetClassName());
 			Class klass = Class.forName(getTargetClassName());
-			return JsonStringUtil.convertTo(klass, jsonString);
+			return JsonUtil.convertTo(klass, jsonString);
 		} catch (ClassNotFoundException ex) {
 			logger.error("ClasssNotFoundError for {}", getName());
 		}

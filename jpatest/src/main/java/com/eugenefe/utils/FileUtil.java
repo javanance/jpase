@@ -32,7 +32,7 @@ public class FileUtil {
 			String[] arr = line.split(";");
 		}
 		reader.close();
-//		logger.info("return size : {},{}" , cnt,returnValue.replaceAll("\n", ""));
+//		logger.info("file read : {},{}" , cnt,returnValue.replaceAll("\n", ""));
 		return returnValue;
 	}
 

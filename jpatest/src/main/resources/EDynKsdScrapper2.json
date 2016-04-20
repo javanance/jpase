@@ -1,0 +1,20 @@
+[	{ 	 "name" 		: "Ksd191C3"
+		,"referer"		: "http://www.seibro.co.kr/websquare/control.jsp?w2xPath=/IPORTAL/user/derivCombi/BIP_CNTS07001V.xml&menuNo=191"
+		,"action"		: "\"newnIssuSecnListCnt\""
+		,"task"			: "\"ksd.safe.bip.cnts.DerivCombi.process.DeriCommPTask\""
+		,"tag_data"		:  { "SECN_TPNM" 		: "\"ELS\""
+							, "STD_DT" 			: "\"${std_dt}\""
+							, "MENU_NO"			: "\"191\""
+							, "CMM_BTN_ABBR_NM" : "\"allview,allview,print,hwp,word,pdf,comparison,favorites,more2,more2,link,link,wide,wide,top,\""
+				  			, "W2XPATH"  		: "\"/IPORTAL/user/derivCombi/BIP_CNTS07001V.xml\""
+				  			, "START_PAGE" 		: "\"1\""
+				  			, "END_PAGE"   		: "\"10\""
+				  		   }		
+		,"value_type"	: "tag"
+		,"type"			: "parameter"
+		,"head_element"	: "result"
+		,"attr_name"	: "value"		  			
+		,"param_file"	: ""
+#		,"param_file"	: "KsdBaseParameter.json"
+	}
+]	

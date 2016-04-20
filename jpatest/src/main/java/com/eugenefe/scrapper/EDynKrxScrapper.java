@@ -1,27 +1,21 @@
 package com.eugenefe.scrapper;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import com.eugenefe.enums.EFilePath;
-import com.eugenefe.utils.FilePathUtil;
 import com.eugenefe.utils.FileUtil;
 import com.eugenefe.utils.JsonDynaEnum;
-import com.eugenefe.utils.JsonStringUtil;
-import com.eugenefe.utils.KrxScrapUtil;
+import com.eugenefe.utils.JsonUtil;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.mchange.io.FileUtils;
 
 public class EDynKrxScrapper {
-	private static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(KrxScrapUtil.class);
+	private static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(EDynKrxScrapper.class);
 	private String name;
 	private String url;
 	private String optUrl;
@@ -34,11 +28,8 @@ public class EDynKrxScrapper {
 	static {
 		values = JsonDynaEnum.convertTo(EDynKrxScrapper.class);
 	}
-	
-	
 	public EDynKrxScrapper() {
 	}
-
 	
 	public static List<EDynKrxScrapper> values(){
 		return values;
@@ -58,7 +49,7 @@ public class EDynKrxScrapper {
 			for(Map.Entry<String, String> entry : getFormData().entrySet()){
 				String[] splitStr = entry.getValue().split("\\$\\{");
 				if(splitStr.length==2){
-					parameterMeta.put(splitStr[1].split("\\}")[0], entry.getKey());
+					parameterMeta.put(splitStr[1].split("\\}")[0].toLowerCase(), entry.getKey());
 				}
 			}
 			return parameterMeta;
@@ -103,7 +94,7 @@ public class EDynKrxScrapper {
 		try {
 			String filePath =EFilePath.KRX_DATA.getFilePath() + getParamFile();
 			String jsonString = FileUtil.readFile(filePath);
-			return JsonStringUtil.convertToMap(jsonString);
+			return JsonUtil.convertToMap(jsonString);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -117,7 +108,7 @@ public class EDynKrxScrapper {
 		try {
 //			logger.info("klass: {}", getTargetClassName());
 			Class klass = Class.forName(getTargetClassName());
-			return JsonStringUtil.convertTo(klass, jsonString);
+			return JsonUtil.convertTo(klass, jsonString);
 		} catch (ClassNotFoundException ex) {
 			logger.error("ClasssNotFoundError for {}", getName());
 		}
@@ -126,7 +117,7 @@ public class EDynKrxScrapper {
 	
 	private void filterParameters(Map<String, String> rawData){
 		for(Map.Entry<String, String> entry : getParameterMeta().entrySet()){
-			logger.info("para: {},{}", entry.getKey(), entry.getValue());
+//			logger.info("para: {},{}", entry.getKey(), entry.getValue());
 			getFormData().put(entry.getValue(), rawData.get(entry.getKey()));
 		}
 	}

@@ -20,7 +20,7 @@ import com.eugenefe.entity.Ksd200T3;
 import com.eugenefe.entity.OdsKrxMeta;
 import com.eugenefe.enums.EKsdMenu;
 import com.eugenefe.enums.ENamingConvention;
-import com.eugenefe.utils.JsonStringUtil;
+import com.eugenefe.utils.JsonStringUtilOld;
 import com.eugenefe.utils.KsdScrapUtil;
 import com.eugenefe.utils.KsdScrapUtilEnum;
 import com.fasterxml.jackson.databind.ObjectMapper;

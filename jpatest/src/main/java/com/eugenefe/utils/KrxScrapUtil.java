@@ -1,30 +1,13 @@
 package com.eugenefe.utils;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.ObjectInputStream.GetField;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.sql.Time;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.ejb.Timeout;
-
-import org.apache.commons.lang3.text.StrSubstitutor;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 
 import com.eugenefe.enums.EKrxMenuDyn;
-import com.eugenefe.enums.EKsdMenu;
-import com.eugenefe.enums.EKsdMenuDyn;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 
 public class KrxScrapUtil {
 	private static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(KrxScrapUtil.class);
@@ -49,7 +32,7 @@ public class KrxScrapUtil {
 	public static <E> List<E> convertTo(EKrxMenuDyn krxMenu, String jsonString) {
 		try {
 			Class klass = Class.forName(krxMenu.getTargetClassName());
-			return JsonStringUtil.convertTo(klass, jsonString);
+			return JsonUtil.convertTo(klass, jsonString);
 		} catch (ClassNotFoundException ex) {
 			logger.error("ClasssNotFoundError for {}", krxMenu);
 		}
