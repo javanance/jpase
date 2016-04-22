@@ -1,11 +1,7 @@
 package fetchKrx;
 
 import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
@@ -13,17 +9,10 @@ import javax.persistence.EntityManager;
 
 import org.greyhawk.logger.Logger;
 import org.greyhawk.logger.LoggerFactory;
-import org.reflections.Reflections;
 
-import com.eugenefe.entity.Ksd200T2;
-import com.eugenefe.entity.Ksd200T3;
 import com.eugenefe.entity.OdsKrxMeta;
 import com.eugenefe.enums.EKsdMenu;
-import com.eugenefe.utils.JsonStringUtilOld;
-import com.eugenefe.utils.KsdScrapUtil;
 import com.eugenefe.utils.KsdScrapUtilEnum;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 
 public class $9003JsonStringUtilTest {
 	private final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger($9003JsonStringUtilTest.class);

@@ -114,14 +114,19 @@ public class $9005JsonUtilTest {
 //			return listJsonString.split("[^:]\\s*[")[1].split("(,{|\\]")[0];
 //		}
 		logger.info("entityJson : {}",	JsonUtil.extractEntityJson(bbb));
-		logger.info("element    : {}",	JsonUtil.extractElemntsFrom(bbb));
+		logger.info("getElement : {}",	JsonUtil.getElements(bbb).get(0));
+		
+		
+//		logger.info("element    : {}",	JsonUtil.extractElemntsFrom(bbb));
 		logger.info("fromMap    : {}",  JsonUtil.convertToEntityJson(map));
 		logger.info("toMap      : {}",  JsonUtil.convertToMap(bbb));
 		logger.info("etyJson    : {}",  JsonUtil.convertToEntityJson(JsonUtil.convertToMap(bbb).get(1)));
 		logger.info("listJson   : {}",  JsonUtil.convertToListJson(JsonUtil.convertToMap(bbb).get(1)));
 		logger.info("add        : {}",  JsonUtil.addList(bbb, ccc));
+		logger.info("add1       : {}", JsonUtil.addList1(bbb, ccc));
 		logger.info("addOld     : {}", JsonUtil.addListOld(bbb, ccc));
 		logger.info("merge      : {}", JsonUtil.merge(aaa, bbb));
+		logger.info("join       : {}", JsonUtil.join(aaa, bbb));
 		logger.info("bbb        : {}",bbb);
 		logger.info("mergeOld   : {}",  JsonUtil.mergeOld(aaa, bbb));
 		

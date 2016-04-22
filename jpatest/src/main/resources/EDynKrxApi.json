@@ -1,0 +1,129 @@
+[	{ 	 "name" 		: "KrxApiKospiStockList"
+		,"url"	    	: " https://testbed.koscom.co.kr/gateway/v1/market/stocks/lists?infoTpCd=01&mktTpCd=1"
+		,"param_file"	: ""
+		,"result_element": "isuLists"
+	}
+,	{ 	 "name" 		: "KrxApiKosdaqStockList"
+		,"url"	    	: " https://testbed.koscom.co.kr/gateway/v1/market/stocks/lists?infoTpCd=01&mktTpCd=2"
+		,"param_file"	: ""
+		,"result_element": "isuLists"
+	}
+,	{ 	 "name" 		: "KrxApiStockMaster"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/stocks/master?isuSrtCd=${isuSrtCd}"
+		,"param_file"	: "stockList.json"
+		,"result_element": "root"
+	}
+	
+,	{ 	 "name" 		: "KrxApiStockPrice"
+		,"url"	    	: " https://testbed.koscom.co.kr/gateway/v1/market/stocks/price?isuSrtCd=${isuSrtCd}"
+		,"param_file"	: "stockList.json"
+		,"result_element"	: "root"
+	}
+,	{ 	 "name" 		: "KrxApiStockOrderbook"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/stocks/orderbook?isuSrtCd=${isuSrtCd}"
+		,"param_file"	: "stockList.json"
+		,"result_element"		: "root"
+	}
+,	{ 	 "name" 		: "KrxApiStockInvestors"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/stocks/investors?isuSrtCd=${isuSrtCd}"
+		,"param_file"	: "stockList.json"
+		,"result_element"		: "invstLists"
+	}
+,	{ 	 "name" 		: "KrxApiStockHistory"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/stocks/history?isuSrtCd=${isuSrtCd}&trnsmCycleTpCd=D&inqStrtDd=${inqStrtDd}&inqEndDd=${inqEndDd}&reqCnt=${reqCnt}"
+		,"param_file"	: "stockList.json"
+		,"result_element"		: "root"
+	}
+,	{ 	 "name" 		: "KrxApiIndexFuturesList"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/futures/lists?infoTpCd=01&mktTpCd=4"
+		,"param_file"	: ""
+		,"result_element"		: "root"
+	}
+,	{ 	 "name" 		: "KrxApiStockFuturesList"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/futures/lists?infoTpCd=01&mktTpCd=5"
+		,"param_file"	: ""
+		,"result_element"		: "root"
+	}	
+,	{ 	 "name" 		: "KrxApiOtherFuturesList"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/futures/lists?infoTpCd=01&mktTpCd=6"
+		,"param_file"	: ""
+		,"result_element"		:"root"
+	}		
+,	{ 	 "name" 		: "KrxApiFuturesMaster"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/futures/master?isuSrtCd=${isuSrtCd}"
+		,"param_file"	: "futuresList.json"
+		,"result_element"		:"root"
+	}			
+,	{ 	 "name" 		: "KrxApiFuturesPrice"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/futures/price?isuSrtCd=${isuSrtCd}"
+		,"param_file"	: "futuresList.json"
+		,"result_element"		: "root"
+	}	
+,	{ 	 "name" 		: "KrxApiFuturesOrderbook"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/futures/orderbook?isuSrtCd=${isuSrtCd}"
+		,"param_file"	: "futuresList.json"
+		,"result_element"		:"root"
+	}	
+,	{ 	 "name" 		: "KrxApiFuturesHistory"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/futures/history?isuSrtCd=${isuSrtCd}&trnsmCycleTpCd=D&inqStrtDd=${inqStrtDd}&inqEndDd=${inqEndDd}&reqCnt=${reqCnt}"
+		,"param_file"	: "futuresList.json"
+		,"result_element"		: "root"
+	}	
+,	{ 	 "name" 		: "KrxApiIndexOptionList"
+		,"result_element"		: true
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/options/lists?infoTpCd=03&mktTpCd=4"
+		,"param_file"	: ""
+		,"result_element"		:"root"
+	}	
+,	{ 	 "name" 		: "KrxApiOptionsMaster"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/options/master?isuSrtCd=${isuSrtCd}"
+		,"param_file"	: "optionsList.json"
+		,"result_element"		: "root"
+	}	
+,	{ 	 "name" 		: "KrxApiOptionsPrice"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/options/price?isuSrtCd=${isuSrtCd}"
+		,"param_file"	: "optionsList.json"
+		,"result_element"		: "root"
+	}			
+,	{ 	 "name" 		: "KrxApiOptionsOrderbook"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/options/orderbook?isuSrtCd=${isuSrtCd}"
+		,"param_file"	: "optionsList.json"
+		,"result_element"		: "root"
+	}	
+,	{ 	 "name" 		: "KrxApiOptionsHistory"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/options/history?isuSrtCd=${isuSrtCd}&trnsmCycleTpCd=D&inqStrtDd=${inqStrtDd}&inqEndDd=${inqEndDd}&reqCnt=${reqCnt}"
+		,"param_file"	: "optionsList.json"
+		,"result_element"		: "root"
+	}	
+,	{ 	 "name" 		: "KrxApiKospiIndex"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/industry/index?mktTpCd=1"
+		,"param_file"	: ""
+		,"result_element"		: "root"
+	}	
+,	{ 	 "name" 		: "KrxApiKosdaqIndex"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/industry/index?mktTpCd=2"
+		,"param_file"	: ""
+		,"result_element"		: "root"
+	}		
+,	{ 	 "name" 		: "KrxApiKospiIndexProspect"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/industry/prospectindex?mktTpCd=1	"
+		,"param_file"	: ""
+		,"result_element"		: true
+	}	
+,	{ 	 "name" 		: "KosdaqIndexProspect"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/industry/prospectindex?mktTpCd=2"
+		,"param_file"	: ""
+		,"result_element"		: "root"
+	}						
+
+,	{ 	 "name" 		: "KrxApiIndustryInvestors"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/industry/investors?invstCd=${invstCd}&indCd=${indCd}"
+		,"param_file"	: ""
+		,"result_element"		: true
+	}	
+,	{ 	 "name" 		: "KrxApiIndexHistory"
+		,"url"	    	: "https://testbed.koscom.co.kr/gateway/v1/market/industry/history?indCd=${indCd}&trnsmCycleTpCd=D&inqStrtDd=${inqStrtDd}&inqEndDd=${inqEndDd}&reqCnt=${reqCnt}"
+		,"param_file"	: "indexList.json"
+		,"result_element"		: true
+	}	
+]
