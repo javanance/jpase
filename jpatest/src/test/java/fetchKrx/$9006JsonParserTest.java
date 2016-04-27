@@ -81,7 +81,7 @@ public class $9006JsonParserTest {
 				e.printStackTrace();
 		}
 		logger.info("aa : {}", parserList.get(1).getResult().toString());
-		logger.info("aa : {}", JsonUtil.getFieldValue(parserList.get(1).getResult().toString(), "isuCd"));
+		logger.info("element : {}", JsonUtil.getFieldValue(parserList.get(1).getResult().toString(), "isuCd"));
 	}	
 	
 	private static void parser(){

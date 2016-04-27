@@ -16,6 +16,7 @@ import com.eugenefe.scrapper.EDynKrxScrapper;
 import com.eugenefe.utils.FileUtil;
 import com.eugenefe.utils.JsonDynaEnum;
 import com.eugenefe.utils.JsonUtil;
+import com.fasterxml.jackson.databind.JsonNode;
 
 public class $5002KrxApiDynEnumTest {
 	private final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(org.slf4j.Logger.ROOT_LOGGER_NAME);
@@ -28,21 +29,31 @@ public class $5002KrxApiDynEnumTest {
 	
 	
 
-	private static void dynamicEnumKrxApiTest() {
+	private static void dynamicEnumKrxApiTest() throws Exception {
+		String rst ="";
+		JsonNode node ;
 		try {
 			for (EDynKrxApi aa : EDynKrxApi.values()) {
 //				if(aa.getName().equals("KrxApiKospiStockList")){
-					if(aa.getName().equals("KrxApiStockMaster")){	
+					if(aa.getName().equals("KrxApiKospiStockMaster")){	
 					
 					logger.info("name : {}, {}", aa.getName(), aa.getUrl());
-					logger.info("name : {}, {}", aa.getName(), aa.getParameterMeta());
-					
-					FileUtil.writeFile(EFilePath.KRX_DATA.getFilePath() + "stockMaster" + ".json",aa.getListJson());
-					logger.info("scrapResult : {}, {}", aa.getListJson());
+//					logger.info("name : {}, {}", aa.getName(), aa.getParameterMeta());
+					if(aa.getResultElement() =="" || aa.getResultElement().equals("root")){
+						rst = aa.getListJson();
+					}
+					else{
+						node = JsonUtil.getElements(aa.getListJson()).get(0);
+						rst = JsonUtil.getFieldValue(node.toString(), "result");
+						rst = JsonUtil.getFieldValue(rst, "isuLists");
+					}
+					FileUtil.writeFile(EFilePath.KRX_DATA.getFilePath() + aa.getName() + ".json",rst);
+//					logger.info("scrapResult : {}, {}", aa.getListJson());
 				}
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
+			
 		}
 
 	}
@@ -90,7 +101,7 @@ public class $5002KrxApiDynEnumTest {
 //			logger.info("rst :{},{}",JsonUtil.convertToMap("[" + rstDoc.body().text()+"]").get(0).get("isuLists"));
 //			Map<String, String> map = (Map<String, String>) JsonUtil.convertToMap("[" + rstDoc.body().text()+"]").get(0).get("isuLists");
 //			FileUtil.writeFile(EFilePath.KRX_DATA.getFilePath() + "aaaaaa" + ".json", buffer.toString());
-//			FileUtil.writeFile(EFilePath.KRX_DATA.getFilePath() + "aaaaaa" + ".json", rstDoc.body().text().split("isuLists\"\\s*:")[1])
+//			FileUtil.writeFile(EFilePath.KRX_DATA.getFilePath() + "stockMaster" + ".json", rstDoc.body().text().split("isuLists\"\\s*:")[1])
 		}
 		catch(IOException  ex){
 			logger.error("sys","coudnt get the html");

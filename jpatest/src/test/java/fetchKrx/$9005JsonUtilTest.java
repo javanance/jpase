@@ -100,11 +100,12 @@ public class $9005JsonUtilTest {
 		String bbb ="  [{\"aaa\":\"bbb\", \"a\":[{\"aa\":\"bb\"}, {\"cc\":\"dd\"}]}, {\"aaa\":\"ddd\", \"b\":{\"aa\":\"bb\", \"cc\":\"dd\"}}]";
 //		String bbb ="  [{\"aaa\":\"bbb\", \"a\":[{\"aa\":\"bb\"}, {\"cc\":\"dd\"}]}]";
 //		String bbb ="  [{\"aaa\":\"bbb\", \"a\":[{\"aa\":\"bb\"}, {\"cc\":\"dd\"}]}]";
-		String ccc  =" [ {\"aaa\":\"kkk\", \"a\":[{\"aa\":\"bb\"}, {\"cc\":\"dd\"}]}]";
+//		String ccc  =" [ {\"aaa\":\"kkk\", \"a\":[{\"aa\":\"bb\"}, {\"cc\":\"dd\"}]}]";
+		String ccc  ="  {\"aaaa\":\"kkk\"}";
 //		String aaa  =" {\"isin\":\"kkk\", \"map\" :[{\"aa\":\"bb\"}, {\"cc\":\"dd\"}] }";
 		String aaa  =" {\"aaa\":\"kkk\", \"map\" :\"zz\"}";
 		
-		Map<String, String > map = new HashMap<String, String>();
+		Map<String, Object > map = new HashMap<String, Object>();
 		map.put("aaa", "aa");
 		map.put("bbb", "bb");
 //		logger.info("aaa : {}" ,bbb.split("[^:]\\s*\\["));
@@ -113,23 +114,19 @@ public class $9005JsonUtilTest {
 //		if(listJsonString.split("[^:]\\s*\\[").length > 2){
 //			return listJsonString.split("[^:]\\s*[")[1].split("(,{|\\]")[0];
 //		}
-		logger.info("entityJson : {}",	JsonUtil.extractEntityJson(bbb));
-		logger.info("getElement : {}",	JsonUtil.getElements(bbb).get(0));
-		
-		
-//		logger.info("element    : {}",	JsonUtil.extractElemntsFrom(bbb));
-		logger.info("fromMap    : {}",  JsonUtil.convertToEntityJson(map));
-		logger.info("toMap      : {}",  JsonUtil.convertToMap(bbb));
-		logger.info("etyJson    : {}",  JsonUtil.convertToEntityJson(JsonUtil.convertToMap(bbb).get(1)));
-		logger.info("listJson   : {}",  JsonUtil.convertToListJson(JsonUtil.convertToMap(bbb).get(1)));
-		logger.info("add        : {}",  JsonUtil.addList(bbb, ccc));
-		logger.info("add1       : {}", JsonUtil.addList1(bbb, ccc));
-		logger.info("addOld     : {}", JsonUtil.addListOld(bbb, ccc));
-		logger.info("merge      : {}", JsonUtil.merge(aaa, bbb));
-		logger.info("join       : {}", JsonUtil.join(aaa, bbb));
+
 		logger.info("bbb        : {}",bbb);
-		logger.info("mergeOld   : {}",  JsonUtil.mergeOld(aaa, bbb));
+		logger.info("getElement : {}",	JsonUtil.getEntityNodes(bbb).get(0));
+		logger.info("getElement : {}",	JsonUtil.getEntityNodes(aaa).get(0));
 		
+		
+		logger.info("toMap      : {}",  JsonUtil.convertToMap(bbb));
+		logger.info("add        : {}",  JsonUtil.addList(bbb, ccc));
+		
+		
+		logger.info("attach : {},{}", JsonUtil.attachElement(aaa, bbb, "list"));
+		logger.info("attach1 : {},{}", JsonUtil.attachElement(aaa, bbb));
+		logger.info("attach2: {},{}", JsonUtil.getElement(bbb, "a").get(0).get("aa"));
 		
 	}
 }

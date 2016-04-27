@@ -94,7 +94,7 @@ public class EDynKrxScrapper {
 		try {
 			String filePath =EFilePath.KRX_DATA.getFilePath() + getParamFile();
 			String jsonString = FileUtil.readFile(filePath);
-			return JsonUtil.convertToMap(jsonString);
+			return JsonUtil.convertToStringMap(jsonString);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

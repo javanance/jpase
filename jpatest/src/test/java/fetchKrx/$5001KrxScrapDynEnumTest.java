@@ -8,8 +8,9 @@ public class $5001KrxScrapDynEnumTest {
 	private final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(org.slf4j.Logger.ROOT_LOGGER_NAME);
 	// private final static Logger _logger = LoggerFactory.getLogger("EUGENE");
 
-	public static void main(String[] args) throws Exception {
-		dynamicEnumKrxScrapperTest();
+	public static void main(String[] args)  {
+		System.out.println("aaa");
+//		dynamicEnumKrxScrapperTest();
 	}
 
 	private static void dynamicEnumKrxScrapperTest() {
