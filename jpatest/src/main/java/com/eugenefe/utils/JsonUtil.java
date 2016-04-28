@@ -89,7 +89,7 @@ public class JsonUtil {
 		JsonNode elementNode ;
 		
 		for (JsonNode jsonNode : getEntityNodes(listJsonString)) {
-			logger.info("ele : {}", jsonNode.findValue(elementName));
+//			logger.info("ele : {}", jsonNode.findValue(elementName));
 			elementNode = jsonNode.findValue(elementName);
 			switch (elementNode.getNodeType()) {
 			case ARRAY:

@@ -55,7 +55,8 @@ public class EDynKrxScrapper3 {
 			for(Map.Entry<String, String> entry : getFormData().entrySet()){
 				String[] splitStr = entry.getValue().split("\\$\\{");
 				if(splitStr.length==2){
-					parameterMeta.put(splitStr[1].split("\\}")[0].toLowerCase(), entry.getKey());
+//					parameterMeta.put(splitStr[1].split("\\}")[0].toLowerCase(), entry.getKey());
+					parameterMeta.put(splitStr[1].split("\\}")[0], entry.getKey());
 				}
 			}
 			return parameterMeta;
@@ -64,7 +65,7 @@ public class EDynKrxScrapper3 {
 
 
 	public String getJson() {
-		int timeout = 1000000;
+		int timeout = 100000000;
 		String  rst ="";
 		String temp;
 		int cnt =0;
@@ -77,17 +78,17 @@ public class EDynKrxScrapper3 {
 		}
 		else {
 			for(Map<String, String> data : parameterList){
+//				logger.info("parameterData :  {}, {}", data, getParameterMeta());
 				cnt = cnt+1;
 				filterParameters(data);
 				if(formData.toString().contains("=null")){
 					logger.warn("Parameter is not switched to data of line {} in  {} ",  getParamFile(), cnt );
 				}
 				else {
-//   			        logger.info("formData : {}, {}",  parameterList.size(), formData);
+//   			        logger.info("formData : {}, {}",  parameterList.size(), scrap(getUrl(), getOptUrl(),  getFormData(), timeout));
 					temp = JsonUtil.attachElement(getJsonHeader(), getJsonParam(data), "param");
 //	    			rst = JsonUtil.addList(rst, JsonUtil.attachElement(temp, scrap(getUrl(), getOptUrl(),  getFormData(), timeout), "result"));
 					rst = JsonUtil.addList(rst, JsonUtil.attachElement(temp, scrap(getUrl(), getOptUrl(),  getFormData(), timeout)));
-					
 				}
 			}
 			
@@ -105,18 +106,17 @@ public class EDynKrxScrapper3 {
 			else{
 				String fileJsonString = FileUtil.readFile(EFilePath.KRX_DATA.getFilePath() + getParamFile());
 				elementJson = JsonUtil.getElements(fileJsonString, getParamElement()).toString();
-//				logger.info("json param : {},{}", fileJsonString);
+//				logger.info("json param : {},{}", elementJson, fileJsonString);
 //				logger.info("json param : {},{}",  JsonUtil.getElements(fileJsonString, getParamElement()));
 				if(elementJson.equals("[]") || elementJson.equals("{}")){
 					return JsonUtil.convertToStringMap(defJsonString);
 				}
 				else{
-					logger.info("json param : {},{}",  defJsonString, elementJson);
+//					logger.info("json param : {},{}",  defJsonString, elementJson);
 					String jsonString = JsonUtil.attachElement(defJsonString, elementJson);
 //				    logger.info("json param : {},{}",  defJsonString, elementJson);
 					
 					return JsonUtil.convertToStringMap(jsonString);
-					
 				}
 			}
 			

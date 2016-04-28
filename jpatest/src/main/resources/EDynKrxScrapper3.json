@@ -1,4 +1,393 @@
-[	{ 	 "name" 		: "Krx80103PC"
+[	{ 	 "name" 		: "Krx10049T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060101%2Fmkd02060101&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060101/MKD02060101.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10050T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060102%2Fmkd02060102&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060102/MKD02060102.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10051T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060103%2Fmkd02060103&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060103/MKD02060103.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}
+,	{ 	 "name" 		: "Krx10052T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060104%2Fmkd02060104&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060104/MKD02060104.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}
+,	{ 	 "name" 		: "Krx10053T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060105%2Fmkd02060105&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060105/MKD02060105.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}
+,	{ 	 "name" 		: "Krx10054T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060106%2Fmkd02060106&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060106/MKD02060106.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}
+,	{ 	 "name" 		: "Krx10055T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060201%2Fmkd02060201&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060201/MKD02060201.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}
+,	{ 	 "name" 		: "Krx10056T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060202%2Fmkd02060202&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060202/MKD02060202.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10057T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060203%2Fmkd02060203&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060203/MKD02060203.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}
+,	{ 	 "name" 		: "Krx10058T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060204%2Fmkd02060204&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060204/MKD02060204.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}
+,	{ 	 "name" 		: "Krx10059T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060205%2Fmkd02060205&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060205/MKD02060205.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10060T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060206%2Fmkd02060206&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060206/MKD02060206.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10061T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060207%2Fmkd02060207&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060207/MKD02060207.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}		
+,	{ 	 "name" 		: "Krx10062T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060208%2Fmkd02060208&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060208/MKD02060208.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10063T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060209%2Fmkd02060209&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060209/MKD02060209.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10064T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060210%2Fmkd02060210&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060210/MKD02060210.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10065T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060301%2Fmkd02060301&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060301/MKD02060301.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}
+,	{ 	 "name" 		: "Krx10066T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060302%2Fmkd02060302&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060302/MKD02060302.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10067T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060400%2Fmkd02060400&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060400/MKD02060400.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}
+,	{ 	 "name" 		: "Krx10068T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060500%2Fmkd02060500&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060500/MKD02060500.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10069T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060600%2Fmkd02060600&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060600/MKD02060600.jsp",  "schdate": "\"${std_dt}\"" , "curPage" : "1",  "pageSize" : "10000"}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10070T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060700%2Fmkd02060700&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060700/MKD02060700.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10071T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060801%2Fmkd02060801&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060801/MKD02060801.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}
+,	{ 	 "name" 		: "Krx10072T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060802%2Fmkd02060802&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060802/MKD02060802.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10073T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02060900%2Fmkd02060900&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02060900/MKD02060900.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}		
+,	{ 	 "name" 		: "Krx10074T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02061000%2Fmkd02061000&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061000/MKD02061000.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10075T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02061100%2Fmkd02061100&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061100/MKD02061100.jsp",  "schdate": "\"${std_dt}\""}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10076C1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=COM%2Fuly_equfu_list&name=selectbox"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061200/MKD02061200.jsp",  "schdate": "\"${std_dt}\"" }
+		,"param_file"	: ""
+		,"param_element" : ""
+	}						
+,	{ 	 "name" 		: "Krx10076T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02061200%2Fmkd02061200&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061200/MKD02061200.jsp",  "schdate": "\"${std_dt}\"" , "ulyId" : "\"${ulyId}\""}
+		,"param_file"	: "Krx10076C1.json"
+		,"param_element" : "block1"
+	}
+,	{ 	 "name" 		: "Krx10077C1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=COM%2Fuly_equop_list&name=selectbox"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061300/MKD02061300.jsp",  "schdate": "\"${std_dt}\"" }
+		,"param_file"	: ""
+		,"param_element" : ""
+	}			
+,	{ 	 "name" 		: "Krx10077T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02061300%2Fmkd02061300_01&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061300/MKD02061300.jsp",  "schdate": "\"${std_dt}\"" , "ulyId" : "\"${ulyId}\""}
+		,"param_file"	: "Krx10077C1.json"
+		,"param_element" : "block1"
+	}		
+,	{ 	 "name" 		: "Krx10078C1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=COM%2Fuly_bonfu_list&name=selectbox"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061400/MKD02061400.jsp",  "schdate": "\"${std_dt}\"" }
+		,"param_file"	: ""
+		,"param_element" : ""
+	}			
+,	{ 	 "name" 		: "Krx10078T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02061400%2Fmkd02061400&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061400/MKD02061400.jsp",  "schdate": "\"${std_dt}\"" , "ulyId" : "\"${ulyId}\""}
+		,"param_file"	: "Krx10078C1.json"
+		,"param_element" : "block1"
+	}	
+,	{ 	 "name" 		: "Krx10079C1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=COM%2Fuly_curfu_list&name=selectbox"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061501/MKD02061501.jsp",  "schdate": "\"${std_dt}\"" }
+		,"param_file"	: ""
+		,"param_element" : ""
+	}			
+,	{ 	 "name" 		: "Krx10079T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02061501%2Fmkd02061501&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061501/MKD02061501.jsp",  "schdate": "\"${std_dt}\"" , "ulyId" : "\"${ulyId}\""}
+		,"param_file"	: "Krx10079C1.json"
+		,"param_element" : "block1"
+	}	
+,	{ 	 "name" 		: "Krx10080C1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=COM%2Fuly_curop_list&name=selectbox"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061502/MKD02061502.jsp",  "schdate": "\"${std_dt}\"" }
+		,"param_file"	: ""
+		,"param_element" : ""
+	}			
+,	{ 	 "name" 		: "Krx10080T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02061502%2Fmkd02061502_01&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061502/MKD02061502.jsp",  "schdate": "\"${std_dt}\"" , "ulyId" : "\"${ulyId}\""}
+		,"param_file"	: "Krx10080C1.json"
+		,"param_element" : "block1"
+	}	
+,	{ 	 "name" 		: "Krx10081C1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=COM%2Fuly_comfu_list&name=selectbox"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061600/MKD02061600.jsp",  "schdate": "\"${std_dt}\"" }
+		,"param_file"	: ""
+		,"param_element" : ""
+	}			
+,	{ 	 "name" 		: "Krx10081T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02061600%2Fmkd02061600&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061600/MKD02061600.jsp",  "schdate": "\"${std_dt}\"" , "ulyId" : "\"${ulyId}\""}
+		,"param_file"	: "Krx10081C1.json"
+		,"param_element" : "block1"
+	}	
+,	{ 	 "name" 		: "Krx10082T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02061701%2Fmkd02061701&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061701/MKD02061701.jsp",  "schdate": "\"${std_dt}\"" }
+		,"param_file"	: ""
+		,"param_element" : ""
+	}		
+,	{ 	 "name" 		: "Krx10083T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02061702%2Fmkd02061702&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061702/MKD02061702.jsp",  "schdate": "\"${std_dt}\"" }
+		,"param_file"	: ""
+		,"param_element" : ""
+	}	
+,	{ 	 "name" 		: "Krx10084T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02061801%2Fmkd02061801&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061801/MKD02061801.jsp",  "schdate": "\"${std_dt}\"" }
+		,"param_file"	: ""
+		,"param_element" : ""
+	}
+,	{ 	 "name" 		: "Krx10085T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02061802%2Fmkd02061802&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061802/MKD02061802.jsp",  "schdate": "\"${std_dt}\"" }
+		,"param_file"	: ""
+		,"param_element" : ""
+	}						
+,	{ 	 "name" 		: "Krx10086T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02061803%2Fmkd02061803&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061803/MKD02061803.jsp",  "schdate": "\"${std_dt}\"" }
+		,"param_file"	: ""
+		,"param_element" : ""
+	}
+,	{ 	 "name" 		: "Krx10087T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F02%2F0206%2F02061804%2Fmkd02061804&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/02/0206/02061804/MKD02061804.jsp",  "schdate": "\"${std_dt}\"" }
+		,"param_file"	: ""
+		,"param_element" : ""
+	}
+
+,	{ 	 "name" 		: "Krx20001T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"   	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F03%2F0301%2F03010000%2Fmkd03010000_04&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/03/0301/03010000/MKD03010000T1.jsp", "lang" : "ko", "schdate": "\"${std_dt}\"", "idx_upclss_cd" : "01" }
+		,"param_file"	: ""
+        ,"param_element" : ""
+    }
+,	{ 	 "name" 		: "Krx20001T2"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"   	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F03%2F0301%2F03010000%2Fmkd03010000_04&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/03/0301/03010000/MKD03010000T1.jsp", "lang" : "ko", "schdate": "\"${std_dt}\"", "idx_upclss_cd" : "02"}
+		,"param_file"	: ""
+        ,"param_element" : ""
+    }
+,	{ 	 "name" 		: "Krx20001T3"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"   	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F03%2F0301%2F03010000%2Fmkd03010000_04&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/03/0301/03010000/MKD03010000T1.jsp", "lang" : "ko", "schdate": "\"${std_dt}\"", "idx_upclss_cd" : "03" }
+		,"param_file"	: ""
+        ,"param_element" : ""
+    }        
+    
+,	{ 	 "name" 		: "Krx40015T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"   	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F06%2F0601%2F06010100%2Fmkd06010100_01&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/06/0601/06010100/MKD06010100.jsp", "isu_cd": "ALL" ,"todate": "\"${std_dt}\""}
+		,"param_file"	: ""
+        ,"param_element" : ""		
+		
+	}
+,	{ 	 "name" 		: "Krx40020C1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=COM%2Fhpkor03002_combo&name=selectbox"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/06/0602/06020100/MKD06020100.jsp", "type" : "1" , "cp_type" : "C"}
+		,"param_file"	: ""
+		,"param_element" : ""
+	}							
+,	{ 	 "name" 		: "Krx40020T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F06%2F0602%2F06020100%2Fmkd06020100&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/06/0602/06020100/MKD06020100.jsp", "type" : "1", "cp_type" : "C", "isu_cd" : "\"${isu_cd}\"" }
+		,"param_file"	: "Krx40020C1.json"
+		,"param_element" : "result"
+	}
+,	{ 	 "name" 		: "Krx40020T2"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F06%2F0602%2F06020100%2Fmkd06020100&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/MKD/06/0602/06020100/MKD06020100.jsp", "type" : "1", "cp_type" : "P", "isu_cd" : "\"${isu_cd}\"" }
+		,"param_file"	: "Krx40020C1.json"
+		,"param_element" : "result"
+	}
+,   { 	 "name" 		: "Krx80078PT"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=COM%2Ffinder_bnd_ord_isu&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/COM/FinderBndOrdIsu.jsp" , "sch_typ": "MB" , "consonant" : "\"${consonant}\""}
+		,"param_file"	: "consonant.json"
+        ,"param_element" : "parameter"
+	}	
+,   { 	 "name" 		: "Krx80079PT"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=COM%2Ffinder_bndisu&name=form"
+		,"form_data" 	: { "pagePath" : "/contents/COM/FinderBndIsu.jsp" , "bnd_tp_cd": "Y" , "bnd_typ":"" , "consonant" : "\"${consonant}\""}
+		,"param_file"	: "consonant.json"
+        ,"param_element" : "parameter"
+	}	
+,   { 	 "name" 		: "Krx80079T1"
+		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
+		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F10%2F1003%2F10031500%2Fmkd10031500&name=form"
+		,"form_data" 	: {"pagePath":"/contents/MKD/10/1003/10031500/MKD10031500.jsp","evaluation":"1", "isu_cd":"\"${isu_cd}\"","fr_work_dt":"\"${from_dt}\"","to_work_dt":"\"${std_dt}\""}
+		,"param_file"	: "Krx80079PT.json"
+        ,"param_element" : "result"
+	}	
+	
+,   { 	 "name" 		: "Krx80103PC"
 		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
 		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=%2FCOM%2Ffinder_fuisu_combo1&name=selectbox"
 		,"form_data" 	: { "pagePath" : "/contents/COM/FinderFuIsu.jsp"}
@@ -62,8 +451,6 @@
 		,"param_file"	: "Krx80104PC4.json"
        ,"param_element" : "block1"		
 	}				
-			
-		
 ,	{ 	 "name" 		: "Krx80104T1"
 		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
 		,"opt_url"   	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F10%2F1004%2F10041200%2Fmkd10041200_01&name=form"
@@ -85,43 +472,5 @@
 		,"param_file"	: "Krx80104PT4.json"
         ,"param_element" : "result"		
 	}	
-		
 	
-,	{ 	 "name" 		: "Krx20001T1"
-		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
-		,"opt_url"   	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F03%2F0301%2F03010000%2Fmkd03010000_04&name=form"
-		,"form_data" 	: { "pagePath" : "/contents/MKD/03/0301/03010000/MKD03010000T1.jsp", "lang" : "ko", "schdate": "\"${schdate}\"", "idx_upclss_cd" : "\"${idx_upclss_cd}\"" }
-		,"param_file"	: ""
-        ,"param_element" : ""
-    }
-,	{ 	 "name" 		: "Krx40015T1"
-		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
-		,"opt_url"   	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F06%2F0601%2F06010100%2Fmkd06010100_01&name=form"
-		,"form_data" 	: { "pagePath" : "/contents/MKD/06/0601/06010100/MKD06010100.jsp", "isu_cd": "ALL" ,"todate": "\"${todate}\""}
-		,"param_file"	: ""
-        ,"param_element" : ""		
-		
-	}
-,	{ 	 "name" 		: "Krx40020C1"
-		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
-		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=COM%2Fhpkor03002_combo&name=selectbox"
-		,"form_data" 	: { "pagePath" : "/contents/MKD/06/0602/06020100/MKD06020100.jsp", "type" : "1" , "cp_type" : "C"}
-		,"param_file"	: ""
-		,"param_element" : ""
-	}							
-,	{ 	 "name" 		: "Krx40020T1"
-		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
-		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F06%2F0602%2F06020100%2Fmkd06020100&name=form"
-#		,"form_data" 	: { "pagePath" : "/contents/MKD/06/0602/06020100/MKD06020100.jsp", "type" : "1", "cp_type" : "\"${cp_type}\"", "isu_cd" : "\"${kor_isu_nm}\"" }
-		,"form_data" 	: { "pagePath" : "/contents/MKD/06/0602/06020100/MKD06020100.jsp", "type" : "1", "cp_type" : "C", "isu_cd" : "\"${isu_cd}\"" }
-		,"param_file"	: "Krx40020C1.json"
-		,"param_element" : ""
-	}
-,	{ 	 "name" 		: "Krx40020T2"
-		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
-		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=MKD%2F06%2F0602%2F06020100%2Fmkd06020100&name=form"
-		,"form_data" 	: { "pagePath" : "/contents/MKD/06/0602/06020100/MKD06020100.jsp", "type" : "1", "cp_type" : "P", "isu_cd" : "\"${isu_cd}\"" }
-		,"param_file"	: "Krx40020C1.json"
-		,"param_element" : ""
-	}
 ]		
