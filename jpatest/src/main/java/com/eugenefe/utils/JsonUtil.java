@@ -32,6 +32,7 @@ import com.eugenefe.enums.EKsdMenu;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonObjectFormatVisitor;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.fasterxml.jackson.databind.node.JsonNodeType;
@@ -205,7 +206,7 @@ public class JsonUtil {
 		String rst ="";
 		try {
 			ObjectMapper mapper = new ObjectMapper();
-			mapper.setPropertyNamingStrategy(new PropertyNamingStrategy().SNAKE_CASE);
+//			mapper.setPropertyNamingStrategy(new PropertyNamingStrategy().SNAKE_CASE);
 			rst = mapper.writeValueAsString(map);
 			return rst;
 		} catch (IOException e) {
@@ -221,7 +222,7 @@ public class JsonUtil {
 		}
 		try {
 			ObjectMapper mapper = new ObjectMapper();
-			mapper.setPropertyNamingStrategy(new PropertyNamingStrategy().SNAKE_CASE);
+//			mapper.setPropertyNamingStrategy(new PropertyNamingStrategy().SNAKE_CASE);
 //			rst = mapper.readValue(listJsonString, new ArrayList<HashMap<String, String>>().getClass());
 			rst = mapper.readValue(listJsonString, new ArrayList<Map<String, Object>>().getClass());
 			
@@ -239,7 +240,7 @@ public class JsonUtil {
 		}
 		try {
 			ObjectMapper mapper = new ObjectMapper();
-			mapper.setPropertyNamingStrategy(new PropertyNamingStrategy().SNAKE_CASE);
+//			mapper.setPropertyNamingStrategy(new PropertyNamingStrategy().SNAKE_CASE);
 //			rst = mapper.readValue(listJsonString, new ArrayList<HashMap<String, String>>().getClass());
 			rst = mapper.readValue(listJsonString, new ArrayList<Map<String, String>>().getClass());
 			
@@ -255,9 +256,10 @@ public class JsonUtil {
 		List<E> rst = new ArrayList<E>();
 		try {
 			ObjectMapper mapper = new ObjectMapper();
-			mapper.setPropertyNamingStrategy(new PropertyNamingStrategy().SNAKE_CASE);
+//			mapper.setPropertyNamingStrategy(new PropertyNamingStrategy().SNAKE_CASE);
 
 			rst = mapper.readValue(jsonString, mapper.getTypeFactory().constructCollectionType(List.class, klass));
+			
 			return rst;
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -272,13 +274,25 @@ public class JsonUtil {
 			return null;
 		}
 		try {
-			ObjectMapper mapper = new ObjectMapper();
-			mapper.setPropertyNamingStrategy(new PropertyNamingStrategy().SNAKE_CASE);
-			JsonNode rootNode = mapper.readTree(listJsonString);
+//			ObjectMapper mapper = new ObjectMapper();
+//			mapper.setPropertyNamingStrategy(new PropertyNamingStrategy().SNAKE_CASE);
+//			JsonNode rootNode = mapper.readTree(listJsonString);
+			JsonNode rootNode = getJsonMapper().readTree(listJsonString);
 			return rootNode;
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	private static ObjectMapper getJsonMapper(){
+		ObjectMapper mapper = new ObjectMapper();
+		return mapper;
+	}
+
+	private static ObjectMapper getJsonMapper(PropertyNamingStrategy nameStratege){
+		ObjectMapper mapper = new ObjectMapper();
+		mapper.setPropertyNamingStrategy(nameStratege);
+		return mapper;
 	}
 }

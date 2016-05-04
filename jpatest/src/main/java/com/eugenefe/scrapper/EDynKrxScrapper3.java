@@ -16,11 +16,13 @@ import com.eugenefe.utils.JsonDynaEnum;
 import com.eugenefe.utils.JsonUtil;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 
 public class EDynKrxScrapper3 {
 	private static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(EDynKrxScrapper3.class);
+	private static final PropertyNamingStrategy jsonNameStrategy = PropertyNamingStrategy.SNAKE_CASE;
 	private String name;
 	private String url;
 	private String optUrl;
