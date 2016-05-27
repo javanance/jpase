@@ -1,18 +1,31 @@
 package fetchKrx;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.util.EntityUtils;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.Connection.Response;
 
+import com.eugenefe.entity.TestEntity;
 import com.eugenefe.enums.EFilePath;
 import com.eugenefe.scrapper.EDynKrxScrapper;
 import com.eugenefe.utils.FileUtil;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class $8002Quandl {
 	private final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(org.slf4j.Logger.ROOT_LOGGER_NAME);
@@ -24,7 +37,9 @@ public class $8002Quandl {
 //		getQuandlQuery();
 		
 //		String url ="https://www.quandl.com/data/FRED/USARGDPQDSNAQ?api_key=W6qxqMz1sZPZcG93SxS4" ;
-		romeToRio();
+//		romeToRio();
+		testJacksonString();
+//		getFlightSearchData();
 	}
 	private static void zzz(){
 		String url ="https://www.quandl.com/api/v3/datasets/WIKI/FB.json?api_key=rN1Kd5yuzLA1fcwjLnFy" ;
@@ -42,6 +57,67 @@ public class $8002Quandl {
 			// TODO: handle exception
 		}
 	}
+	
+	public static void getFlightSearchData() {
+//	    DefaultHttpClient httpclient = new DefaultHttpClient(); 
+	    HttpClient  httpclient =HttpClientBuilder.create().build();
+//	    String url = "http://finance.yahoo.com/q/hp?s=005930.KS+Historical+Prices";
+	    String url ="https://www.rome2rio.com/api/json/GetFlightPricesAsyncProgress?id=http%3A%2F%2Fpartners.api.skyscanner.net%2Fapiservices%2Fpricing%2Fuk1%2Fv1.0%2Feca848208a19428887cb0f9acd45798f_ecilpojl_5390203AB08027B40F6AC23E253711B9%20ICN%20OKA%2CICN%2COKA%2CSkyScanner%2Chttp%3A%2F%2Fwww.skyscanner.com%2F&version=201605050453&";
+//	    String url ="https://www.rome2rio.com/api/json/GetFlightPricesAsyncStart?origins=ICN&destinations=OKA&outDate=5-12-2016&retDate=5-19-2016&adults=1&children=0&infants=0&cabin=e&currency=KRW&version=201605050453&";
+	    try
+	    { 
+	    	HttpGet request = new HttpGet(url);
+			HttpResponse res = httpclient.execute(request);
+/*	    	// Specify values for path parameters (shown as {...}) 
+	        URIBuilder builder = new URIBuilder("http://evaluate.rome2rio.com/api/1.2/json/Search/");
+	        
+	        // Specify your developer key 
+	        builder.setParameter("key", "Z2CA71LM"); 
+	        // Specify values for the following required parameters 
+	        builder.setParameter("oName", "ICN"); 
+	        builder.setParameter("dName", "LAX");
+//	        builder.setParameter("oPos", "New York Kennedy");
+//	        builder.setParameter("dPos", "40.64441,-73.78275");
+//	        builder.setParameter("flags", "0x000FFFF0");
+//	        builder.setParameter("flags", "0x000FFFFE");
+	        builder.setParameter("flags", "0x000FFFFC");
+	        
+//	        URI uri = builder.build(); 
+	        HttpGet request = new HttpGet(uri); 
+	        HttpResponse response = httpclient.execute(request); 
+*/	         
+			HttpEntity entity = res.getEntity();
+	        if (entity != null) { 
+	            System.out.println("EntityUtil:" + EntityUtils.toString(entity)); 
+	        }
+//	        return EntityUtils.toString(entity);
+			logger.info("aaa:  {}", entity.toString());
+	    }
+	    catch(Exception e) 
+	    { 
+	        System.out.println(e.getMessage()); 
+//	        return null;
+	    } 
+	    
+	}
+	private static void testJacksonString(){
+		String json = "{\"repSecnNm\": \"aa\", \"isin\": \"bb\", \"ent\":[{\"seq\": 11, \"sub\": \"kk\"}]}";
+//		String json = "{\"aa\",  \"bb\"}";
+//		String json = "[\"aa\",  \"bb\"]";
+		TestEntity rst = new TestEntity();
+		try {
+			ObjectMapper mapper = new ObjectMapper();
+//			mapper.setPropertyNamingStrategy(new PropertyNamingStrategy().SNAKE_CASE);
+//			rst = mapper.readValue(json, mapper.getTypeFactory().constructCollectionType(List.class, klass));
+			rst = mapper.readValue(json, TestEntity.class);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		logger.info("aa: {},{}", rst.getIsin(), rst.getEnt().get(0).getSeq());
+	}
+	
 	public static void romeToRio() { 
 		try {
 //			String url = "http://evaluate.rome2rio.com/api/1.2/json/Search/";

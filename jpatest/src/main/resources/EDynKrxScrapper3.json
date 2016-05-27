@@ -375,9 +375,12 @@
 ,   { 	 "name" 		: "Krx80079PT"
 		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
 		,"opt_url"  	: "http://marketdata.krx.co.kr/contents/COM/GenerateOTP.jspx?bld=COM%2Ffinder_bndisu&name=form"
-		,"form_data" 	: { "pagePath" : "/contents/COM/FinderBndIsu.jsp" , "bnd_tp_cd": "Y" , "bnd_typ":"" , "consonant" : "\"${consonant}\""}
-		,"param_file"	: "consonant.json"
-        ,"param_element" : "parameter"
+		,"form_data" 	: { "pagePath" : "/contents/COM/FinderBndIsu.jsp" , "bnd_tp_cd": "Y" , "bnd_typ":"" , "consonant" : "1"}
+		#,"form_data" 	: { "pagePath" : "/contents/COM/FinderBndIsu.jsp" , "bnd_tp_cd": "Y" , "bnd_typ":"" , "consonant" : "\"${consonant}\""}
+		#,"param_file"	: "consonant.json"
+        #,"param_element" : "parameter"
+        ,"param_file"	: ""
+        ,"param_element" : ""		
 	}	
 ,   { 	 "name" 		: "Krx80079T1"
 		,"url"	    	: "http://marketdata.krx.co.kr/contents/MKD/99/MKD99000001.jspx"
